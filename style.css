@@ -1,0 +1,240 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: url(./images/bg-intro-desktop.png);
+  background-color: hsl(0, 100%, 74%);
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+}
+
+.container {
+  padding: 60px;
+  padding-bottom: 0;
+}
+.row1 {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.row2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.try {
+  height: 40px;
+  width: 460px;
+  background-color: hsl(248, 32%, 49%);
+  color: white;
+  text-align: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  font-weight: 400;
+  font-size: 15px;
+  box-shadow: 6px 8px 5px 0px rgba(96, 85, 165, 0.16);
+  -webkit-box-shadow: 6px 8px 5px 0px rgba(96, 85, 165, 0.16);
+  -moz-box-shadow: 6px 8px 5px 0px rgba(96, 85, 165, 0.16);
+}
+
+.try span {
+  font-weight: 700;
+}
+form {
+  border: none;
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  background-color: white;
+  border-radius: 10px;
+}
+input {
+  color: hsl(249, 10%, 26%);
+  height: 40px;
+  width: 400px;
+  padding: 2px;
+  padding-left: 20px;
+  font-weight: 700;
+  border: 1px solid hsl(246, 25%, 77%);
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  outline: none; /* Retire la bordure orange appliquée par certains
+        navigateurs (Chrome notamment) lors du focus des éléments <input> */
+  margin-bottom: 20px;
+}
+.ficti {
+  background: url(./images/icon-error.svg) no-repeat;
+  background-position: 370px;
+  background-size: 15px;
+  border: 2px solid hsl(0, 100%, 74%);
+}
+
+button {
+  cursor: pointer;
+  height: 40px;
+  width: 400px;
+  margin-bottom: 10px;
+  background-color: hsl(154, 59%, 51%);
+  border: none;
+  text-transform: uppercase;
+  color: white;
+  font-weight: 600;
+  border-radius: 10px;
+  box-shadow: 11px 10px 7px -7px rgba(0, 0, 0, 0.66);
+  -webkit-box-shadow: 11px 10px 7px -7px rgba(0, 0, 0, 0.66);
+  -moz-box-shadow: 11px 10px 7px -7px rgba(0, 0, 0, 0.66);
+}
+button:hover {
+  opacity: 0.5;
+}
+form p {
+  font-size: 10px;
+  text-align: center;
+  color: hsl(246, 25%, 77%);
+}
+
+form p span {
+  color: hsl(0, 100%, 74%);
+  font-weight: 700;
+}
+
+h1 {
+  color: white;
+  font-weight: 900;
+  line-height: 45px;
+  font-size: 45px;
+  margin-bottom: 30px;
+}
+
+.col1 p {
+  color: white;
+}
+
+.error {
+  margin-top: -18px;
+  margin-left: 250px;
+  color: hsl(0, 100%, 74%);
+  font-weight: 500;
+  font-style: italic;
+  visibility: hidden;
+}
+
+@media (max-width: 1024px) {
+  .row1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .container {
+    padding: 30px;
+    padding-top: 200px;
+  }
+  h1 {
+    font-size: 30px;
+  }
+  .col1 p {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    background: url(./images/bg-intro-mobile.png);
+    background-color: hsl(0, 100%, 74%);
+  }
+  .row1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .container {
+    padding: 60px;
+  }
+  .col1 {
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 30px;
+    padding-top: 100px;
+  }
+  h1 {
+    font-size: 30px;
+  }
+  .col1 {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  input,
+  button {
+    width: 240px;
+  }
+  .error {
+    margin-top: -18px;
+    margin-bottom: 15px;
+    margin-left: 86px;
+  }
+  .try {
+    height: 80px;
+    width: 300px;
+
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 20px;
+  }
+}
+
+@media (max-width: 320px) {
+  .container {
+    padding: 30px;
+    padding-top: 80px;
+  }
+  h1 {
+    font-size: 20px;
+  }
+  .col1 {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  input,
+  button {
+    width: 200px;
+  }
+  .error {
+    margin-top: -18px;
+    margin-bottom: 15px;
+    margin-left: 38px;
+  }
+  .try {
+    height: 80px;
+    width: 200px;
+
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 20px;
+  }
+  input {
+    padding-left: 10px;
+  }
+  button {
+    font-size: 10px;
+  }
+  form{
+      padding: 9px;
+      padding-top: 20px;
+  }
+}
